@@ -1,1 +1,5 @@
 theme
+node_modules
+node_modules
+ApiServer/node_modules
+FrontEnd/node_modules
