@@ -43,7 +43,13 @@ import SocketRoutes from "./routes/SocketRoutes";
 import DocumentObjectRoute from "./routes/DocumentObjectRoute";
 
 import path from "path";
-import { setIo, userRoom, bindSocketToUser, unbindSocket, getOnlineUsers } from "./socket";
+import {
+  setIo,
+  userRoom,
+  bindSocketToUser,
+  unbindSocket,
+  getOnlineUsers,
+} from "./socket";
 import * as mysql from "mysql2/promise";
 import * as jwt from "jsonwebtoken";
 class Server {
@@ -173,9 +179,16 @@ class Server {
             hasAuthToken: Boolean((socket.handshake.auth as any)?.token),
             hasQueryToken: typeof query.token === "string",
             hasBearer: Boolean(bearer),
-            hasCookieAccessToken: Boolean(cookies["accessToken"] || cookies["access_token"] || cookies["jwt"] || cookies["token"]),
+            hasCookieAccessToken: Boolean(
+              cookies["accessToken"] ||
+                cookies["access_token"] ||
+                cookies["jwt"] ||
+                cookies["token"]
+            ),
             hasXAccessToken: typeof headers["x-access-token"] === "string",
-            providedUserId: Boolean((socket.handshake.auth as any)?.userId || query.userId),
+            providedUserId: Boolean(
+              (socket.handshake.auth as any)?.userId || query.userId
+            ),
           };
           console.log("Socket handshake debug:", dbg);
         } catch {}
@@ -298,7 +311,9 @@ class Server {
         }, ip=${ip}`
       );
       if (identifiedUser) {
-        try { console.log("Online users snapshot:", getOnlineUsers()); } catch {}
+        try {
+          console.log("Online users snapshot:", getOnlineUsers());
+        } catch {}
       }
 
       // Example: Send a welcome message to the connected user
@@ -322,8 +337,12 @@ class Server {
           if (uid) {
             bindSocketToUser(socket, uid);
             identifiedUser = uid;
-            console.log(`Socket registered: id=${socket.id}, user=${identifiedUser}`);
-            try { console.log("Online users snapshot:", getOnlineUsers()); } catch {}
+            console.log(
+              `Socket registered: id=${socket.id}, user=${identifiedUser}`
+            );
+            try {
+              console.log("Online users snapshot:", getOnlineUsers());
+            } catch {}
             // Persist socketId on late registration
             (async () => {
               try {
@@ -341,7 +360,9 @@ class Server {
         } catch {}
       });
       socket.on("disconnect", () => {
-        try { unbindSocket(socket); } catch {}
+        try {
+          unbindSocket(socket);
+        } catch {}
         console.log(
           `Socket disconnected: id=${socket.id}, user=${
             identifiedUser ?? "unknown"
@@ -352,6 +373,7 @@ class Server {
     this.app.use(WebsiteRoute);
     this.app.use(AuthenticateRoute);
     this.app.use(IndexRoute);
+    //1
     this.app.use(checkAccessRoute);
     this.app.use(MainRoute);
     this.app.use(StructureRoute);
