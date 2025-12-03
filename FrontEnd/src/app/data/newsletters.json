@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "January Update",
+    "description": "News and updates for January",
+    "date": "2023-01-15",
+    "template": "<p>January newsletter content</p>"
+  },
+  {
+    "id": 2,
+    "title": "Spring Highlights",
+    "description": "Highlights from spring season",
+    "date": "2023-04-10",
+    "template": "<p>Spring newsletter content</p>"
+  },
+  {
+    "id": 3,
+    "title": "Summer Edition",
+    "description": "What's new this summer",
+    "date": "2023-07-01",
+    "template": "<p>Summer newsletter content</p>"
+  }
+]

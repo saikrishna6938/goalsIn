@@ -1,0 +1,99 @@
+{
+  "documentTagType": "LEAVE_REQUEST",
+  "selections": [
+    {
+      "questions": [3],
+      "options": [
+        {
+          "id": "1",
+          "name": "Sick Leave"
+        },
+        {
+          "id": "2",
+          "name": "Casual Leave"
+        },
+        {
+          "id": "3",
+          "name": "Paid Leave"
+        },
+        {
+          "id": "4",
+          "name": "Maternity Leave"
+        }
+      ]
+    }
+  ],
+  "filterOptions": [],
+  "sections": [
+    {
+      "sectionName": "Leave Request Form",
+      "repeated": false,
+      "validationSchema": {
+        "1": "req,3",
+        "2": "req,3",
+        "3": "req",
+        "4": "req",
+        "5": "req",
+        "6": "req"
+      },
+      "initialValues": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "Employee Details",
+          "repeated": false,
+          "form": [
+            {
+              "order": "1",
+              "attributeName": "EmployeeName",
+              "attributeDescription": "Enter Employee Name",
+              "attributeType": "1"
+            },
+            {
+              "order": "2",
+              "attributeName": "EmployeeID",
+              "attributeDescription": "Enter Employee ID",
+              "attributeType": "4"
+            }
+          ]
+        },
+        {
+          "groupName": "Leave Details",
+          "repeated": false,
+          "form": [
+            {
+              "order": "3",
+              "attributeName": "LeaveType",
+              "attributeDescription": "Select Leave Type",
+              "attributeType": "8"
+            },
+            {
+              "order": "4",
+              "attributeName": "StartDate",
+              "attributeDescription": "Select Start Date",
+              "attributeType": "9"
+            },
+            {
+              "order": "5",
+              "attributeName": "EndDate",
+              "attributeDescription": "Select End Date",
+              "attributeType": "9"
+            },
+            {
+              "order": "6",
+              "attributeName": "Reason",
+              "attributeDescription": "Enter Reason for Leave",
+              "attributeType": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

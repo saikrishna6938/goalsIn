@@ -1,0 +1,189 @@
+[
+  {
+    "title": "University Details",
+    "description": "Details about the University",
+    "columnType": 1,
+    "details": [
+      {
+        "name": "Name",
+        "value": "Name",
+        "isFilter": true,
+        "dataType": "string",
+        "selections": {},
+        "fieldType": 1
+      },
+      {
+        "name": "Study Level",
+        "value": "StudyLevelId",
+        "isFilter": true,
+        "dataType": "number",
+        "selections": { "1": "Bachelors", "2": "Masters" },
+        "fieldType": 8
+      },
+      {
+        "name": "Country",
+        "value": "Country",
+        "isFilter": false,
+        "dataType": "string",
+        "selections": {},
+        "fieldType": 1
+      },
+      {
+        "name": "Location",
+        "value": "Location",
+        "isFilter": true,
+        "dataType": "string",
+        "selections": {
+          "1": "New York",
+          "2": "Toronto",
+          "3": "Oxford",
+          "4": "London"
+        },
+        "fieldType": 1
+      }
+    ]
+  },
+  {
+    "title": "Course Details",
+    "description": "Information about the Course",
+    "columnType": 1,
+    "details": [
+      {
+        "name": "Concentration",
+        "value": "Concentration",
+        "isFilter": true,
+        "dataType": "string",
+        "selections": {
+          "1": "Computer Science",
+          "2": "Business Administration",
+          "3": "Engneering",
+          "4": "Medicine"
+        },
+        "fieldType": 8
+      },
+      {
+        "name": "Duration",
+        "value": "Duration",
+        "isFilter": true,
+        "dataType": "string",
+        "selections": {
+          "1": "One Year",
+          "2": "Two Years",
+          "3": "Four Years"
+        },
+        "fieldType": 8
+      },
+      {
+        "name": "Work Experience",
+        "value": "WorkExp",
+        "isFilter": true,
+        "dataType": "string",
+        "selections": {
+          "1": "One Year",
+          "2": "Two Years",
+          "3": "Four Years"
+        },
+        "fieldType": 8
+      },
+      {
+        "name": "Bachelors Program",
+        "value": "BachelorsProgram",
+        "isFilter": true,
+        "dataType": "string",
+        "selections": {
+          "1": "Computer Science",
+          "2": "Business Administration",
+          "3": "Engneering",
+          "4": "Medicine"
+        },
+        "fieldType": 8
+      }
+    ]
+  },
+  {
+    "title": "Admission Details",
+    "description": "Requirements and Process for Admission",
+    "columnType": 1,
+    "details": [
+      {
+        "name": "IELTS Score",
+        "value": "IeltsOverall",
+        "isFilter": true,
+        "dataType": "Int",
+        "selections": {},
+        "fieldType": 6
+      },
+      {
+        "name": "TOEFL Score",
+        "value": "ToeflScore",
+        "isFilter": true,
+        "dataType": "Int",
+        "selections": {},
+        "fieldType": 6
+      },
+      {
+        "name": "Act Score",
+        "value": "ActScore",
+        "isFilter": true,
+        "dataType": "Int",
+        "selections": {},
+        "fieldType": 6
+      },
+      {
+        "name": "Gre Score",
+        "value": "GreScore",
+        "isFilter": true,
+        "dataType": "Int",
+        "selections": {},
+        "fieldType": 6
+      },
+      {
+        "name": "DET Score",
+        "value": "DETScore",
+        "isFilter": true,
+        "dataType": "Int",
+        "selections": {},
+        "fieldType": 6
+      },
+      {
+        "name": "CGPA or Percentage",
+        "value": "CGPAOrPercentage",
+        "isFilter": true,
+        "dataType": "Int",
+        "selections": {},
+        "fieldType": 6
+      }
+    ]
+  },
+  {
+    "title": "Financial Information",
+    "description": "Details on Fees and Financial Requirements",
+    "columnType": 1,
+    "details": [
+      {
+        "name": "Application Fee",
+        "value": "ApplicationFee",
+        "isFilter": true,
+        "dataType": "Int",
+        "selections": {},
+        "fieldType": 6
+      },
+      {
+        "name": "Tuition Fee",
+        "value": "TuitionFee",
+        "isFilter": true,
+        "dataType": "Int",
+        "selections": {},
+        "fieldType": 6
+      },
+      {
+        "name": "I-20 Deposit Fee",
+        "value": "I20DepositFee",
+        "isFilter": true,
+        "dataType": "Int",
+        "selections": {},
+        "fieldType": 6
+      }
+    ]
+  }
+]

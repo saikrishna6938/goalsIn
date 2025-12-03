@@ -1,0 +1,10 @@
+1 	Textbox
+2 	DescriptionBox
+3 	Checkbox
+4 	RadioButton
+5 	UploadButton
+6 	NumericBox
+7 	CurrencyBox
+8 	Dropdown
+9 	Date
+10 	DocumentTag

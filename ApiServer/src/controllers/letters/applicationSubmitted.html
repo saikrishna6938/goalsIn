@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Submitted</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f2f2f2;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .email-container {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #4caf50;
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .footer {
+        font-size: 14px;
+        text-align: left;
+        margin-top: 20px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <h1>Grad Walk</h1>
+      <h3>Application Submitted Successfully</h3>
+      <p>Hello {{USER_NAME}},</p>
+      <p>
+        Thank you for submitting your application. We have successfully received
+        it. Our team will review your application and contact you soon with
+        further details.
+      </p>
+      <p>
+        If you have any questions or need to provide additional information,
+        please do not hesitate to reach out to us.
+      </p>
+      <div class="footer">
+        Best regards,<br />
+        Grad Walk Team
+      </div>
+    </div>
+  </body>
+</html>

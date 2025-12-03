@@ -1,0 +1,21 @@
+{
+  "documentId": 12345,
+  "documentTypeId": 67890,
+  "tags": [
+    {
+      "tagId": 1,
+      "tagName": "User",
+      "tagDescription": "Select User",
+      "fieldType": 1,
+      "fieldSelections": "{Entity_Users}",
+      "tagValidation": [
+        {
+          "logic": "<Form>{userId}</Form>",
+          "errorMessage": "Please select the userId",
+          "validation": "userId",
+          "type": "number"
+        }
+      ]
+    }
+  ]
+}

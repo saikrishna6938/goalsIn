@@ -1,0 +1,356 @@
+{
+  "documentTagType": "1",
+  "selections": [
+    {
+      "questions": [9],
+      "options": [
+        {
+          "id": "1",
+          "name": "India"
+        },
+        {
+          "id": "2",
+          "name": "Australia"
+        }
+      ]
+    },
+    {
+      "questions": [13, 19],
+      "options": [
+        {
+          "id": "1",
+          "name": "Male"
+        },
+        {
+          "id": "2",
+          "name": "Female"
+        }
+      ]
+    },
+    {
+      "questions": [14],
+      "options": [
+        {
+          "id": "1",
+          "name": "Single"
+        },
+        {
+          "id": "2",
+          "name": "Married"
+        }
+      ]
+    }
+  ],
+  "filterOptions": [51, 52, 53, 54, 55],
+  "sections": [
+    {
+      "sectionName": "Personal Info",
+
+      "validationSchema": {
+        "1": "min,req,3",
+        "2": "min,req,3",
+        "3": "min,req,3",
+        "4": "email,req,3"
+      },
+      "initialValues": {
+        "1": "",
+        "2": "sdfsdf",
+        "3": "sdfsdfsdf",
+        "4": "sdf@sdsf.com",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+        "10": "",
+        "11": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "Enter your Personal Details",
+          "repeated": false,
+          "form": [
+            {
+              "order": "1",
+              "attributeName": "FirstName",
+              "attributeDescription": "Enter your First Name",
+              "attributeType": "1"
+            },
+            {
+              "order": "2",
+              "attributeName": "MiddleName",
+              "attributeDescription": "Enter your Middle Name",
+              "attributeType": "1"
+            },
+            {
+              "order": "3",
+              "attributeName": "LastName",
+              "attributeDescription": "Enter your Last Name",
+              "attributeType": "1"
+            },
+            {
+              "order": "4",
+              "attributeName": "Email",
+              "attributeDescription": "Enter your Email",
+              "attributeType": "1"
+            },
+            {
+              "order": "5",
+              "attributeName": "Phone",
+              "attributeDescription": "Enter your Phone Number",
+              "attributeType": "6"
+            },
+            {
+              "order": "6",
+              "attributeName": "ResidentialAddress",
+              "attributeDescription": "Enter your Residential Address",
+              "attributeType": "1"
+            },
+            {
+              "order": "7",
+              "attributeName": "City",
+              "attributeDescription": "Enter your City",
+              "attributeType": "1"
+            },
+            {
+              "order": "8",
+              "attributeName": "State",
+              "attributeDescription": "Enter your State",
+              "attributeType": "1"
+            },
+            {
+              "order": "9",
+              "attributeName": "Country",
+              "attributeDescription": "Enter your Country",
+              "attributeType": "8"
+            },
+            {
+              "order": "10",
+              "attributeName": "Pincode",
+              "attributeDescription": "Enter your Pin Code",
+              "attributeType": "6"
+            },
+            {
+              "order": "11",
+              "attributeName": "PermanentAddress",
+              "attributeDescription": "Enter your Permanent Address",
+              "attributeType": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "Work Experience",
+      "repeated": true,
+      "initialValues": {
+        "33": "",
+        "34": "",
+        "35": "",
+        "36": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "Work Experience",
+          "repeated": true,
+          "form": [
+            {
+              "order": 33,
+              "attributeName": "Organization Name",
+              "attributeDescription": "Enter Organization Name",
+              "attributeType": "1"
+            },
+            {
+              "order": 34,
+              "attributeName": "Position",
+              "attributeDescription": "Enter your position",
+              "attributeType": "1"
+            },
+            {
+              "order": 35,
+              "attributeName": "From Year",
+              "attributeDescription": "From Year",
+              "attributeType": "9"
+            },
+            {
+              "order": 36,
+              "attributeName": "Till Year",
+              "attributeDescription": "Till date",
+              "attributeType": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "Add your preffered Universities",
+      "repeated": true,
+      "initialValues": {
+        "44": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "University",
+          "repeated": true,
+          "form": [
+            {
+              "order": 44,
+              "attributeName": "Name",
+              "attributeDescription": "Enter University Name",
+              "attributeType": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "Required Information",
+      "repeated": false,
+      "initialValues": {
+        "51": "Yes",
+        "52": "Yes",
+        "53": "India",
+        "54": "4",
+        "55": "1",
+        "56": "5.5"
+      },
+      "formDetails": [
+        {
+          "groupName": "Score Details",
+          "repeated": false,
+          "form": [
+            {
+              "order": 51,
+              "attributeName": "Valid Study Permit",
+              "attributeDescription": "Do you have a valid study permit?",
+              "attributeType": "3"
+            },
+            {
+              "order": 52,
+              "attributeName": "Grading Scheme",
+              "attributeDescription": "Grading Scheme",
+              "attributeType": "3"
+            },
+            {
+              "order": 53,
+              "attributeName": "Provinence of Residence",
+              "attributeDescription": "Provinence of Residence",
+              "attributeType": "1"
+            },
+            {
+              "order": 54,
+              "attributeName": "Educational Level",
+              "attributeDescription": "Education Level",
+              "attributeType": "1"
+            },
+            {
+              "order": 55,
+              "attributeName": "English Exam Type",
+              "attributeDescription": "Enter University Name",
+              "attributeType": "1"
+            },
+            {
+              "order": 56,
+              "attributeName": "Score",
+              "attributeDescription": "Score",
+              "attributeType": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "Additional Info",
+
+      "validationSchema": {
+        "12": "min,3",
+        "13": "min,3",
+        "14": "min,3",
+        "15": "min,3",
+        "16": "min,3",
+        "17": "min,3",
+        "18": "min,3"
+      },
+      "initialValues": {
+        "12": "",
+        "13": "",
+        "14": "",
+        "15": "",
+        "16": "",
+        "17": "",
+        "18": "",
+        "19": "",
+        "20": "",
+        "21": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "Additional Information",
+          "repeated": false,
+          "form": [
+            {
+              "order": "12",
+              "attributeName": "DOB",
+              "attributeDescription": "Enter your Date of Birth",
+              "attributeType": "9"
+            },
+            {
+              "order": "13",
+              "attributeName": "Gender",
+              "attributeDescription": "Select your Gender",
+              "attributeType": "4"
+            },
+            {
+              "order": "14",
+              "attributeName": "MaritalStatus",
+              "attributeDescription": "Enter your Marital Status",
+              "attributeType": "4"
+            },
+            {
+              "order": "15",
+              "attributeName": "PassportNumber",
+              "attributeDescription": "Enter your Passport Number",
+              "attributeType": "1"
+            },
+            {
+              "order": "16",
+              "attributeName": "PassportExpiryDate",
+              "attributeDescription": "Enter your Passport Expiry Date",
+              "attributeType": "1"
+            },
+            {
+              "order": "17",
+              "attributeName": "PassportIssueCountry",
+              "attributeDescription": "Enter your Passport Issue Country",
+              "attributeType": "1"
+            },
+            {
+              "order": "18",
+              "attributeName": "PlaceOfBirth",
+              "attributeDescription": "Enter your Place of Birth",
+              "attributeType": "1"
+            },
+            {
+              "order": "19",
+              "attributeName": "Gender",
+              "attributeDescription": "Enter your Place of Birth",
+              "attributeType": "4"
+            },
+            {
+              "order": "20",
+              "attributeName": "Resume",
+              "attributeDescription": "Upload resume",
+              "attributeType": "5"
+            },
+            {
+              "order": "21",
+              "attributeName": "PDF File",
+              "attributeDescription": "Upload Pdf file",
+              "attributeType": "5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

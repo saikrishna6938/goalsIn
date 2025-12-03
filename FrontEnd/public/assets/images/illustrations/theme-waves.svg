@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a3d66"/>
+      <stop offset="100%" stop-color="#263a54"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffa726" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffa726" stop-opacity="0.05"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1200 200) rotate(45) scale(500 500)">
+      <stop stop-color="#ffa726" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ffa726" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+
+  <!-- soft accent glow -->
+  <circle cx="1200" cy="200" r="500" fill="url(#glow)"/>
+
+  <!-- subtle pattern dots -->
+  <g fill="#ffffff" opacity="0.06">
+    <circle cx="140" cy="120" r="3"/>
+    <circle cx="300" cy="200" r="2"/>
+    <circle cx="520" cy="90" r="2"/>
+    <circle cx="860" cy="160" r="2"/>
+    <circle cx="1080" cy="90" r="3"/>
+    <circle cx="1320" cy="240" r="2"/>
+    <circle cx="1480" cy="120" r="2"/>
+  </g>
+
+  <!-- layered waves -->
+  <path d="M0 760 C 240 720, 420 900, 760 840 C 1060 790, 1260 950, 1600 900 L 1600 1200 L 0 1200 Z" fill="url(#wave1)"/>
+  <path d="M0 840 C 220 800, 420 980, 760 940 C 1080 900, 1320 1040, 1600 1000 L 1600 1200 L 0 1200 Z" fill="url(#wave2)"/>
+  <path d="M0 940 C 200 900, 420 1080, 760 1040 C 1040 1000, 1280 1140, 1600 1120 L 1600 1200 L 0 1200 Z" fill="url(#wave1)" opacity="0.8"/>
+
+  <!-- faint top wave -->
+  <path d="M0 200 C 200 140, 380 260, 640 220 C 900 180, 1120 260, 1600 200 L 1600 0 L 0 0 Z" fill="url(#wave1)" opacity="0.35"/>
+</svg>
+

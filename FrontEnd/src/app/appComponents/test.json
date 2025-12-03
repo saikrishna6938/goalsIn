@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Id",
+    "type": "INT AUTO_INCREMENT PRIMARY KEY",
+    "expression": "equal",
+    "isVisible": true
+  },
+  {
+    "name": "Name",
+    "type": "VARCHAR(255)",
+    "expression": "like",
+    "isVisible": true
+  },
+  {
+    "name": "Concentration",
+    "type": "VARCHAR(255)",
+    "expression": "like",
+    "isVisible": true
+  },
+  {
+    "name": "StudyLevelId",
+    "type": "INT",
+    "expression": "equal",
+    "isVisible": false
+  },
+  {
+    "name": "StudyLvl",
+    "type": "VARCHAR(100)",
+    "expression": "like",
+    "isVisible": false
+  },
+  {
+    "name": "Country",
+    "type": "VARCHAR(100)",
+    "expression": "like",
+    "isVisible": false
+  },
+  {
+    "name": "University",
+    "type": "VARCHAR(255)",
+    "expression": "like",
+    "isVisible": false
+  },
+  {
+    "name": "Country1",
+    "type": "VARCHAR(100)",
+    "expression": "like",
+    "isVisible": false
+  },
+  {
+    "name": "Duration",
+    "type": "VARCHAR(50)",
+    "expression": "like",
+    "isVisible": false
+  },
+  {
+    "name": "UniversityId",
+    "type": "INT",
+    "expression": "equal",
+    "isVisible": false
+  },
+  {
+    "name": "WorkExp",
+    "type": "VARCHAR(100)",
+    "expression": "like",
+    "isVisible": false
+  },
+  {
+    "name": "IeltsOverall",
+    "type": "FLOAT",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "ToeflScore",
+    "type": "FLOAT",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "PteScore",
+    "type": "FLOAT",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "SatScore",
+    "type": "FLOAT",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "ActScore",
+    "type": "FLOAT",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "GreScore",
+    "type": "FLOAT",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "GmatScore",
+    "type": "FLOAT",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "DETScore",
+    "type": "FLOAT",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "Location",
+    "type": "VARCHAR(255)",
+    "expression": "like",
+    "isVisible": false
+  },
+  {
+    "name": "ApplicationFee",
+    "type": "DECIMAL(10, 2)",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "I20DepositFee",
+    "type": "DECIMAL(10, 2)",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "TuitionFee",
+    "type": "DECIMAL(10, 2)",
+    "expression": "greater",
+    "isVisible": true
+  },
+  {
+    "name": "CGPAOrPercentage",
+    "type": "DECIMAL(5, 2)",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "GRE",
+    "type": "DECIMAL(4, 2)",
+    "expression": "lesser",
+    "isVisible": false
+  },
+  {
+    "name": "IELTS",
+    "type": "DECIMAL(4, 2)",
+    "expression": "lesser",
+    "isVisible": false
+  },
+  {
+    "name": "TOEFL",
+    "type": "DECIMAL(4, 2)",
+    "expression": "lesser",
+    "isVisible": false
+  },
+  {
+    "name": "Duolingo",
+    "type": "DECIMAL(4, 2)",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "PTE",
+    "type": "DECIMAL(4, 2)",
+    "expression": "greater",
+    "isVisible": false
+  },
+  {
+    "name": "Backlogs",
+    "type": "VARCHAR(255)",
+    "expression": "like",
+    "isVisible": false
+  },
+  {
+    "name": "WESRequired",
+    "type": "VARCHAR(5)",
+    "expression": "like",
+    "isVisible": false
+  },
+  {
+    "name": "MastersProgram",
+    "type": "VARCHAR(255)",
+    "expression": "like",
+    "isVisible": false
+  },
+  {
+    "name": "BachelorsProgram",
+    "type": "VARCHAR(255)",
+    "expression": "like",
+    "isVisible": false
+  }
+]

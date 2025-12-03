@@ -1,0 +1,684 @@
+{
+  "documentTagType": "1",
+  "selections": [
+    {
+      "questions": [9],
+      "options": [
+        {
+          "id": "1",
+          "name": "India"
+        },
+        {
+          "id": "2",
+          "name": "Australia"
+        }
+      ]
+    },
+    {
+      "questions": [7],
+      "options": [
+        {
+          "id": "1",
+          "name": "Male"
+        },
+        {
+          "id": "2",
+          "name": "Female"
+        },
+        {
+          "id": "3",
+          "name": "Others"
+        }
+      ]
+    },
+    {
+      "questions": [6],
+      "options": [
+        {
+          "id": "1",
+          "name": "Single"
+        },
+        {
+          "id": "2",
+          "name": "Married"
+        },
+        {
+          "id": "3",
+          "name": "Divroced"
+        }
+      ]
+    },
+    {
+      "questions": [26, 32, 37, 59],
+      "options": [
+        {
+          "id": "1",
+          "name": "Yes"
+        },
+        {
+          "id": "2",
+          "name": "No"
+        }
+      ]
+    },
+    {
+      "questions": [47],
+      "options": [
+        {
+          "id": "1",
+          "name": "USA"
+        },
+        {
+          "id": "2",
+          "name": "UK"
+        },
+        {
+          "id": "3",
+          "name": "Canada"
+        },
+        {
+          "id": "4",
+          "name": "Australia"
+        },
+        {
+          "id": "5",
+          "name": "Dubai"
+        },
+        {
+          "id": "6",
+          "name": "Singapore"
+        },
+        {
+          "id": "7",
+          "name": "Switzerland"
+        },
+        {
+          "id": "8",
+          "name": "Germany"
+        },
+        {
+          "id": "9",
+          "name": "Ireland"
+        },
+        {
+          "id": "10",
+          "name": "Malta"
+        }
+      ]
+    },
+    {
+      "questions": [20],
+      "options": [
+        {
+          "id": "1",
+          "name": "Grade 10"
+        },
+        {
+          "id": "2",
+          "name": "Grade 11"
+        },
+        {
+          "id": "3",
+          "name": "Grade 12 / High School"
+        },
+        {
+          "id": "4",
+          "name": "2 years Diploma"
+        },
+        {
+          "id": "5",
+          "name": "3 Years Advanced Diploma"
+        },
+        {
+          "id": "6",
+          "name": "3 years Bachelors Degree"
+        },
+        {
+          "id": "7",
+          "name": "4 years Bachelors Degree"
+        },
+        {
+          "id": "8",
+          "name": "Postgraduate certificate/Diploma"
+        },
+        {
+          "id": "9",
+          "name": "Master Degree"
+        },
+        {
+          "id": "10",
+          "name": "Doctoral Degree(Phd, M.D..)"
+        },
+        {
+          "id": "11",
+          "name": "none"
+        }
+      ]
+    }
+  ],
+  "filterOptions": [41, 38, 39],
+  "sections": [
+    {
+      "sectionName": "Personal Info",
+
+      "validationSchema": {
+        "1": "min,req,3",
+        "2": "min,req,3",
+        "3": "email,req,3",
+        "4": "min,req,10"
+      },
+      "initialValues": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+        "10": "",
+        "11": "",
+        "12": "",
+        "13": "",
+        "14": "",
+        "15": "",
+        "16": "",
+        "17": "",
+        "18": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "Enter your Personal Details",
+          "repeated": false,
+          "form": [
+            {
+              "order": "1",
+              "attributeName": "GivenName",
+              "attributeDescription": "Enter your Given Name",
+              "attributeType": "1"
+            },
+            {
+              "order": "2",
+              "attributeName": "FamilyName",
+              "attributeDescription": "Enter your Middle Name",
+              "attributeType": "1"
+            },
+            {
+              "order": "3",
+              "attributeName": "Email",
+              "attributeDescription": "Enter your email",
+              "attributeType": "1"
+            },
+            {
+              "order": "4",
+              "attributeName": "mobile",
+              "attributeDescription": "Enter your phone number",
+              "attributeType": "6"
+            },
+            {
+              "order": "5",
+              "attributeName": "DOB",
+              "attributeDescription": "Enter your Date of Birth",
+              "attributeType": "9"
+            },
+            {
+              "order": "6",
+              "attributeName": "MaritalStatus",
+              "attributeDescription": "Marital Status",
+              "attributeType": "8"
+            },
+            {
+              "order": "7",
+              "attributeName": "Gender",
+              "attributeDescription": "Enter your Gender",
+              "attributeType": "8"
+            },
+            {
+              "order": "8",
+              "attributeName": "PlaceOfBirth",
+              "attributeDescription": "Enter your Place of Birth",
+              "attributeType": "1"
+            },
+            {
+              "order": "9",
+              "attributeName": "PassportNumber",
+              "attributeDescription": "Enter your PassportNumber",
+              "attributeType": "1"
+            },
+            {
+              "order": "10",
+              "attributeName": "PassportExpiryDate",
+              "attributeDescription": "Enter your PassportExpiryDate",
+              "attributeType": "9"
+            },
+            {
+              "order": "11",
+              "attributeName": "PassportIssueCountry",
+              "attributeDescription": "Enter your Passport Issue Country",
+              "attributeType": "1"
+            },
+            {
+              "order": "12",
+              "attributeName": "CountryCitizenship",
+              "attributeDescription": "Enter your Country Citizenship",
+              "attributeType": "1"
+            },
+            {
+              "order": "13",
+              "attributeName": "Address",
+              "attributeDescription": "Enter your Address",
+              "attributeType": "1"
+            },
+            {
+              "order": "14",
+              "attributeName": "City",
+              "attributeDescription": "Enter your City",
+              "attributeType": "1"
+            },
+            {
+              "order": "15",
+              "attributeName": "State",
+              "attributeDescription": "Enter your State",
+              "attributeType": "1"
+            },
+            {
+              "order": "16",
+              "attributeName": "Country",
+              "attributeDescription": "Enter your Country",
+              "attributeType": "1"
+            },
+            {
+              "order": "17",
+              "attributeName": "Pincode",
+              "attributeDescription": "Enter your Pincode",
+              "attributeType": "6"
+            },
+            {
+              "order": "18",
+              "attributeName": "PermanentAddress",
+              "attributeDescription": "Enter your Permanent Address",
+              "attributeType": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "Education Summary",
+      "repeated": true,
+      "initialValues": {
+        "19": "",
+        "20": "",
+        "21": "",
+        "22": "",
+        "23": "",
+        "24": "",
+        "25": "",
+        "26": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "School Attended",
+          "repeated": true,
+          "form": [
+            {
+              "order": "19",
+              "attributeName": "InstitutionName",
+              "attributeDescription": "Enter Institution Name",
+              "attributeType": "1"
+            },
+            {
+              "order": "20",
+              "attributeName": "Levelofeducation",
+              "attributeDescription": "Enter Level of Education",
+              "attributeType": "8"
+            },
+            {
+              "order": "21",
+              "attributeName": "DegreeName",
+              "attributeDescription": "Enter Degree Name",
+              "attributeType": "1"
+            },
+            {
+              "order": "22",
+              "attributeName": "From Year",
+              "attributeDescription": "From Year",
+              "attributeType": "9"
+            },
+            {
+              "order": "23",
+              "attributeName": "Till Year",
+              "attributeDescription": "Till date",
+              "attributeType": "9"
+            },
+            {
+              "order": "24",
+              "attributeName": "GraduationDate",
+              "attributeDescription": "Enter Degree Name",
+              "attributeType": "9"
+            },
+            {
+              "order": "25",
+              "attributeName": "Marks Secured",
+              "attributeDescription": "Enter marks secured",
+              "attributeType": "6"
+            },
+            {
+              "order": "26",
+              "attributeName": "Physical Certificate",
+              "attributeDescription": "I have Physical Certificate form this Institution",
+              "attributeType": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "English Exam Type",
+      "repeated": true,
+      "initialValues": {
+        "27": "",
+        "28": "",
+        "29": "",
+        "30": "",
+        "31": "",
+        "32": "",
+        "33": "",
+        "34": "",
+        "35": "",
+        "36": "",
+        "37": "",
+        "38": "",
+        "39": "",
+        "40": "",
+        "41": "",
+        "42": "",
+        "43": "",
+        "44": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "English Test Score",
+          "repeated": true,
+          "form": [
+            {
+              "order": "27",
+              "attributeName": "Reading",
+              "attributeDescription": "Enter Reading score",
+              "attributeType": "6"
+            },
+            {
+              "order": "28",
+              "attributeName": "Writing",
+              "attributeDescription": "Enter Writing score",
+              "attributeType": "6"
+            },
+            {
+              "order": "29",
+              "attributeName": "Listening",
+              "attributeDescription": "Enter Listening score",
+              "attributeType": "6"
+            },
+            {
+              "order": "30",
+              "attributeName": "Speaking",
+              "attributeDescription": "Enter Speaking score",
+              "attributeType": "6"
+            },
+            {
+              "order": "31",
+              "attributeName": "Overall",
+              "attributeDescription": "Enter Overall score",
+              "attributeType": "6"
+            },
+            {
+              "order": "32",
+              "attributeName": "I have GRE exam scores",
+              "attributeDescription": "GRE Score",
+              "attributeType": "4"
+            },
+            {
+              "order": "33",
+              "attributeName": "Verbal",
+              "attributeDescription": "Verbal Score",
+              "attributeType": "6"
+            },
+            {
+              "order": "34",
+              "attributeName": "Quantitative",
+              "attributeDescription": "Quantitative score",
+              "attributeType": "6"
+            },
+            {
+              "order": "35",
+              "attributeName": "Writing",
+              "attributeDescription": "Writing Score",
+              "attributeType": "6"
+            },
+            {
+              "order": "36",
+              "attributeName": "GRE Exam Date",
+              "attributeDescription": "Exam Date",
+              "attributeType": "9"
+            },
+            {
+              "order": "37",
+              "attributeName": "I have GMAT exam scores",
+              "attributeDescription": "GMAT Score",
+              "attributeType": "4"
+            },
+            {
+              "order": "38",
+              "attributeName": "IELTS",
+              "attributeDescription": "IELTS Total Score",
+              "attributeType": "6"
+            },
+            {
+              "order": "39",
+              "attributeName": "TOEFL",
+              "attributeDescription": "TOEFL Total Score",
+              "attributeType": "6"
+            },
+            {
+              "order": "40",
+              "attributeName": "Writing",
+              "attributeDescription": "Writing Score",
+              "attributeType": "6"
+            },
+            {
+              "order": "41",
+              "attributeName": "GRE",
+              "attributeDescription": "Total Score",
+              "attributeType": "6"
+            },
+            {
+              "order": "42",
+              "attributeName": "GRE Exam Date",
+              "attributeDescription": "Exam Date",
+              "attributeType": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "Work Experience",
+      "repeated": true,
+      "initialValues": {
+        "43": "",
+        "44": "",
+        "45": "",
+        "46": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "Work Experience",
+          "repeated": true,
+          "form": [
+            {
+              "order": "43",
+              "attributeName": "Organization Name",
+              "attributeDescription": "Enter Organization Name",
+              "attributeType": "1"
+            },
+            {
+              "order": "44",
+              "attributeName": "Position",
+              "attributeDescription": "Enter your position",
+              "attributeType": "1"
+            },
+            {
+              "order": "45",
+              "attributeName": "From Year",
+              "attributeDescription": "From Year",
+              "attributeType": "9"
+            },
+            {
+              "order": "46",
+              "attributeName": "Till Year",
+              "attributeDescription": "Till date",
+              "attributeType": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "Add your preffered Location",
+      "repeated": true,
+      "initialValues": {
+        "47": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "Country",
+          "repeated": true,
+          "form": [
+            {
+              "order": "47",
+              "attributeName": "CountryName",
+              "attributeDescription": "Enter preffered Country Name",
+              "attributeType": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "Additional Information",
+      "repeated": false,
+      "initialValues": {
+        "59": "",
+        "60": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "Background information",
+          "repeated": false,
+          "form": [
+            {
+              "order": "59",
+              "attributeName": "valid Study Permit / Visa?",
+              "attributeDescription": "Do you have a valid study permit?",
+              "attributeType": "4"
+            },
+            {
+              "order": "60",
+              "attributeName": "Have you been refused a visa from Canada, the USA, the United Kingdom, New Zealand, Australia or Ireland?",
+              "attributeDescription": "Provide details",
+              "attributeType": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "Upload Documents",
+
+      "validationSchema": {
+        "": ""
+      },
+      "initialValues": {
+        "48": "",
+        "49": "",
+        "50": "",
+        "51": "",
+        "52": "",
+        "53": "",
+        "54": "",
+        "55": "",
+        "56": "",
+        "57": ""
+      },
+      "formDetails": [
+        {
+          "groupName": "Additional Information",
+          "repeated": false,
+          "form": [
+            {
+              "order": "48",
+              "attributeName": "Grade 10th memo",
+              "attributeDescription": "upload SSC long memo",
+              "attributeType": "5"
+            },
+            {
+              "order": "49",
+              "attributeName": "Grade 12th memo",
+              "attributeDescription": "Upload Inter/Grade 12th long memo",
+              "attributeType": "5"
+            },
+            {
+              "order": "50",
+              "attributeName": "Bachelors",
+              "attributeDescription": "Upload Bachelors transcripts",
+              "attributeType": "5"
+            },
+            {
+              "order": "51",
+              "attributeName": "Bachelors OD",
+              "attributeDescription": "Upload PC, CMM and OD",
+              "attributeType": "5"
+            },
+            {
+              "order": "52",
+              "attributeName": "Passport",
+              "attributeDescription": "Upload front and backside pages",
+              "attributeType": "5"
+            },
+            {
+              "order": "53",
+              "attributeName": "LOR's",
+              "attributeDescription": "Upload Letter of Recommenders",
+              "attributeType": "5"
+            },
+            {
+              "order": "54",
+              "attributeName": "SOP",
+              "attributeDescription": "Upload Statement of Purpose",
+              "attributeType": "5"
+            },
+            {
+              "order": "55",
+              "attributeName": "English Score",
+              "attributeDescription": "Upload English Score Card",
+              "attributeType": "5"
+            },
+            {
+              "order": "56",
+              "attributeName": "Resume",
+              "attributeDescription": "Upload resume",
+              "attributeType": "5"
+            },
+            {
+              "order": "57",
+              "attributeName": "Others",
+              "attributeDescription": "Upload any other additional files",
+              "attributeType": "5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

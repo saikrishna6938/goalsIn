@@ -1,0 +1,14 @@
+{
+  "dashboards": [
+    {
+      "id": 2,
+      "name": "Applications by country",
+      "icon": "taskalt"
+    },
+    {
+      "id": 3,
+      "name": "Applications by users",
+      "icon": "group"
+    }
+  ]
+}

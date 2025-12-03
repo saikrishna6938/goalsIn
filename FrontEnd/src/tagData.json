@@ -1,0 +1,98 @@
+[
+  {
+    "title": "University Details",
+    "description": "Details about the University",
+    "columnType": 1,
+    "details": [
+      {
+        "name": "Name",
+        "value": "Name"
+      },
+      {
+        "name": "Study Level",
+        "value": "StudyLvl"
+      },
+      {
+        "name": "Country",
+        "value": "Country"
+      },
+      {
+        "name": "Location",
+        "value": "Location"
+      }
+    ]
+  },
+  {
+    "title": "Course Details",
+    "description": "Information about the Course",
+    "columnType": 1,
+    "details": [
+      {
+        "name": "Concentration",
+        "value": "Concentration"
+      },
+      {
+        "name": "Duration",
+        "value": "Duration"
+      },
+      {
+        "name": "Work Experience",
+        "value": "WorkExp"
+      },
+      {
+        "name": "Bachelors Program",
+        "value": "BachelorsProgram"
+      }
+    ]
+  },
+  {
+    "title": "Admission Details",
+    "description": "Requirements and Process for Admission",
+    "columnType": 1,
+    "details": [
+      {
+        "name": "IELTS Score",
+        "value": "IeltsOverall"
+      },
+      {
+        "name": "TOEFL Score",
+        "value": "ToeflScore"
+      },
+      {
+        "name": "Act Score",
+        "value": "ActScore"
+      },
+      {
+        "name": "Gre Score",
+        "value": "GreScore"
+      },
+      {
+        "name": "DET Score",
+        "value": "DETScore"
+      },
+      {
+        "name": "CGPA or Percentage",
+        "value": "CGPAOrPercentage"
+      }
+    ]
+  },
+  {
+    "title": "Financial Information",
+    "description": "Details on Fees and Financial Requirements",
+    "columnType": 1,
+    "details": [
+      {
+        "name": "Application Fee",
+        "value": "ApplicationFee"
+      },
+      {
+        "name": "Tuition Fee",
+        "value": "TuitionFee"
+      },
+      {
+        "name": "I-20 Deposit Fee",
+        "value": "I20DepositFee"
+      }
+    ]
+  }
+]

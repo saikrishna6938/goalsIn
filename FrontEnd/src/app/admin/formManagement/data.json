@@ -1,0 +1,32 @@
+{
+  "forms": [
+    {
+      "id": "1",
+      "name": "USA FORM",
+      "description": "Form for United States documentation",
+      "createdDate": "2025-05-08 04:53:28",
+      "updatedDate": "2025-05-08 04:53:28"
+    },
+    {
+      "id": "2",
+      "name": "UK FORM",
+      "description": "Form for United Kingdom operations",
+      "createdDate": "2025-05-08 04:53:28",
+      "updatedDate": "2025-05-08 04:53:28"
+    },
+    {
+      "id": "3",
+      "name": "GERMANY FORM",
+      "description": "Form used in German departments",
+      "createdDate": "2025-05-08 04:53:28",
+      "updatedDate": "2025-05-08 04:53:28"
+    },
+    {
+      "id": "4",
+      "name": "Leave Request Form",
+      "description": "Form for employee leave requests",
+      "createdDate": "2025-05-08 04:53:28",
+      "updatedDate": "2025-05-08 04:53:28"
+    }
+  ]
+}
