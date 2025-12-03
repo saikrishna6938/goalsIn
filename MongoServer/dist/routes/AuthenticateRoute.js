@@ -15,6 +15,7 @@ class AuthenticateRoute {
         this.router.post((0, routeHelpers_1.withBasePath)("forgot-password"), AuthenticateController_1.authController.forgotPassword);
         this.router.post((0, routeHelpers_1.withBasePath)("forgot-password-email"), AuthenticateController_1.authController.forgotPasswordEmail);
         this.router.post((0, routeHelpers_1.withBasePath)("reset-password"), AuthenticateController_1.authController.resetPasswordFrontEnd);
+        this.router.post((0, routeHelpers_1.withBasePath)("create-user"), AuthenticateController_1.authController.register);
         this.router.post((0, routeHelpers_1.withBasePath)("create-user/:entityId"), AuthenticateController_1.authController.register);
         this.router.get((0, routeHelpers_1.withBasePath)("get-all-users/:entityId"), UserRolesManagerController_1.userRolesManagerController.getUsersByEntityId);
         this.router.get((0, routeHelpers_1.withBasePath)("get-user-all/:entityId/:userType"), AuthenticateController_1.authController.getAllUsers);

@@ -23,6 +23,36 @@ const toNumber = (value: any): number | null => {
   return null;
 };
 
+const toBoolean = (value: any, fallback: boolean): boolean => {
+  if (typeof value === "boolean") return value;
+  if (typeof value === "number") return value !== 0;
+  if (typeof value === "string") {
+    const normalized = value.trim().toLowerCase();
+    if (["true", "1", "yes"].includes(normalized)) return true;
+    if (["false", "0", "no"].includes(normalized)) return false;
+  }
+  return fallback;
+};
+
+const normalizeString = (value: any): string | undefined => {
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    return trimmed.length ? trimmed : undefined;
+  }
+  return undefined;
+};
+
+const parseDate = (value: any): Date | undefined => {
+  if (value instanceof Date) return value;
+  if (typeof value === "string" || typeof value === "number") {
+    const date = new Date(value);
+    if (!isNaN(date.getTime())) {
+      return date;
+    }
+  }
+  return undefined;
+};
+
 const RESET_DURATION_MS = 2 * 60 * 60 * 1000; // 2 hours
 
 class AuthenticateController {
@@ -113,22 +143,58 @@ class AuthenticateController {
 
   register = async (req: Request, res: Response) => {
     try {
-      const { entityId } = req.params;
-      const numericEntityId = toNumber(entityId);
-      if (numericEntityId === null) {
-        return failure(res, 400, "entityId is required");
-      }
+      const numericEntityId =
+        toNumber(req.params.entityId) ?? toNumber(req.body?.entityId) ?? 1;
       const incomingUser = req.body || {};
+      const requiredFields = [
+        "userName",
+        "userEmail",
+        "userPassword",
+        "userFirstName",
+        "userLastName",
+      ] as const;
+      const missing = requiredFields.filter(
+        (field) => !normalizeString(incomingUser[field])
+      );
+      if (missing.length) {
+        return failure(
+          res,
+          400,
+          `Missing fields: ${missing.join(", ")}`
+        );
+      }
       const collection = await this.users();
       const userId = await this.nextUserId();
       const now = new Date();
-      const doc: Partial<Users> = {
-        ...incomingUser,
+      const doc: Users = {
         userId,
-        userCreated: now as any,
-        lastNotesSeen: now as any,
+        userName: normalizeString(incomingUser.userName)!,
+        userEmail: normalizeString(incomingUser.userEmail)!,
+        userPassword: normalizeString(incomingUser.userPassword)!,
+        userFirstName: normalizeString(incomingUser.userFirstName)!,
+        userLastName: normalizeString(incomingUser.userLastName)!,
+        socketId: toNumber(incomingUser.socketId) ?? 0,
+        userImage: normalizeString(incomingUser.userImage),
+        userAddress: normalizeString(incomingUser.userAddress),
+        userServerEmail: normalizeString(incomingUser.userServerEmail),
+        userPhoneOne: normalizeString(incomingUser.userPhoneOne),
+        userPhoneTwo: normalizeString(incomingUser.userPhoneTwo),
+        userLastLogin: parseDate(incomingUser.userLastLogin),
+        userCreated: (parseDate(incomingUser.userCreated) ?? now) as any,
+        userEnabled: toBoolean(incomingUser.userEnabled, true) as any,
+        userLocked: toBoolean(incomingUser.userLocked, false) as any,
+        userType: toNumber(incomingUser.userType) ?? 2,
+        roles: normalizeString(incomingUser.roles) ?? "4",
+        entities: normalizeString(incomingUser.entities) ?? "1",
+        lastNotesSeen: (parseDate(incomingUser.lastNotesSeen) ?? now) as any,
       };
-      await collection.insertOne(doc as Users);
+      Object.keys(doc).forEach((key) => {
+        const value = (doc as any)[key];
+        if (value === undefined || value === null) {
+          delete (doc as any)[key];
+        }
+      });
+      await collection.insertOne(doc);
 
       const structureCollection = await this.structures();
       const structure = await structureCollection.findOne({ entityId: numericEntityId });
@@ -144,6 +210,9 @@ class AuthenticateController {
       return success(res, { message: "User registered successfully", user: doc, accessToken, refreshToken });
     } catch (error) {
       console.error("register error", error);
+      if (error && typeof error === "object" && "errInfo" in error) {
+        console.error("register error details:", JSON.stringify((error as any).errInfo, null, 2));
+      }
       return failure(res, 500, "Internal server error");
     }
   };

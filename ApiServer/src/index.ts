@@ -373,16 +373,19 @@ class Server {
     this.app.use(WebsiteRoute);
     this.app.use(AuthenticateRoute);
     this.app.use(IndexRoute);
-    //1
+
     this.app.use(checkAccessRoute);
     this.app.use(MainRoute);
     this.app.use(StructureRoute);
     this.app.use(RolesRoute);
+
     this.app.use(DocumentTypeRoute);
+
     this.app.use(DocumentAnswersRoute);
+
     this.app.use(UploadRoute);
     this.app.use(TasksRoute);
-    this.app.use(GlobalRoutes);
+    this.app.use(GlobalRoutes); //3
     this.app.use(ActionsRoute);
     this.app.use(NotesRoutes);
     this.app.use(HistoryRoutes);
