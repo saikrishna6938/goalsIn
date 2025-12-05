@@ -10,6 +10,7 @@ class MainRoute {
   }
 
   private config() {
+    this.router.post(withBasePath("update-user"), (req, res) => mainController.updateUser(req, res));
     this.router.post(withBasePath("user-details"), mainController.getUser);
   }
 }

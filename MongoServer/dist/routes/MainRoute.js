@@ -9,6 +9,7 @@ class MainRoute {
         this.config();
     }
     config() {
+        this.router.post((0, routeHelpers_1.withBasePath)("update-user"), (req, res) => MainController_1.mainController.updateUser(req, res));
         this.router.post((0, routeHelpers_1.withBasePath)("user-details"), MainController_1.mainController.getUser);
     }
 }

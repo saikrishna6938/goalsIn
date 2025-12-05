@@ -89,6 +89,30 @@ class GlobalController {
                 return res.status(500).json({ success: false, message: "Internal server error" });
             }
         };
+        this.assignDefaultRoleToUser = async (userIdInput) => {
+            const userId = toNumber(userIdInput);
+            if (userId === null)
+                return;
+            try {
+                const usersCollection = await this.users();
+                const user = await usersCollection.findOne({ userId }, { projection: { roles: 1 } });
+                if (!user)
+                    return;
+                const currentRoles = parseCsvNumbers(user.roles);
+                const roleTypes = await this.roleTypes();
+                const defaultRole = await roleTypes.findOne({ roleTypeName: "Default" }, { projection: { roleTypeId: 1 } });
+                const defaultRoleTypeId = defaultRole?.roleTypeId;
+                if (!defaultRoleTypeId)
+                    return;
+                if (currentRoles.includes(defaultRoleTypeId))
+                    return;
+                currentRoles.push(defaultRoleTypeId);
+                await usersCollection.updateOne({ userId }, { $set: { roles: currentRoles.join(",") } });
+            }
+            catch (error) {
+                console.error("assignDefaultRoleToUser error", error);
+            }
+        };
     }
     async userDocumentsPermission() {
         const db = await (0, mongo_1.getMongoDb)();

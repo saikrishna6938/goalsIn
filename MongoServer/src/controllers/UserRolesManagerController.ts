@@ -55,6 +55,22 @@ class UserRolesManagerController {
       return res.status(500).json({ success: false, message: "Internal server error" });
     }
   };
+
+  deleteSuperUserRoles = async (req: Request, res: Response) => {
+    try {
+      const roleIds: Array<number> = Array.isArray(req.body?.roleIds) ? req.body.roleIds.map((id: any) => Number(id)) : [];
+      if (!roleIds.length) {
+        return res.status(400).json({ success: false, message: "roleIds are required" });
+      }
+      const db = await getMongoDb();
+      const collection = db.collection("SuperUserRoles");
+      const result = await collection.deleteMany({ superUserRoleId: { $in: roleIds } });
+      return res.json({ success: true, deletedCount: result.deletedCount });
+    } catch (error) {
+      console.error("deleteSuperUserRoles error", error);
+      return res.status(500).json({ success: false, message: "Internal server error" });
+    }
+  };
 }
 
 export const userRolesManagerController = new UserRolesManagerController();
